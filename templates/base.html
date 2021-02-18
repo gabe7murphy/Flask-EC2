@@ -9,10 +9,15 @@
     <!-- Bootstrap CSS, My CSS, and Favicon -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
 
-    <title>{% block title %}{% endblock %}</title>
+<title>{% block title %}{% endblock %}</title>
 </head>
 
 <body>
@@ -25,11 +30,9 @@
 
         <div class="collapse navbar-collapse" id="navbarsExample04">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="{{ url_for('home') }}" style="position: relative; left: 30px;">Home <span class="sr-only"></span></a>
-                </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('about') }}" style="position: relative; left: 30px;">About Us</a>
+                    <a class="nav-link" href="{{ url_for('about') }}" style="position: relative; left: 30px;">About
+                        Us</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-bs-toggle="dropdown"
