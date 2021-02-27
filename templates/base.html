@@ -22,7 +22,7 @@
 
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="{{ url_for('home') }}" style="position: relative; left: 30px;">Project Title</a>
+        <a class="navbar-brand" href="{{ url_for('home') }}" style="position: relative; left: 30px;">Company Cookout</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
             aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -31,17 +31,12 @@
         <div class="collapse navbar-collapse" id="navbarsExample04">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('about') }}" style="position: relative; left: 30px;">About
-                        Us</a>
+                    <a class="nav-link" href="{{ url_for('menu') }}" style="position: relative; left: 30px;">Menu
+                    </a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-bs-toggle="dropdown"
-                        aria-expanded="false" style="position: relative; left: 30px;">Dropdown</a>
-                    <ul class="dropdown-menu" aria-labelledby="dropdown05">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('about') }}" style="position: relative; left: 30px;">About Us
+                    </a>
                 </li>
             </ul>
         </div>

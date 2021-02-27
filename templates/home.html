@@ -8,9 +8,21 @@ Home
 
 <div class="p-5" style="width: 600px; margin: auto; border: 1px solid black;">
     <main class="px-3" style="text-align: center;">
-        <h1>Welcome to the Cookout Labs</h1>
-        <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the
-            text, and add your own fullscreen background photo to make it your own.</p>
+        <h1>What are you bringing to the cookout?</h1>
+        <div class="content-section">
+            <form method="POST" action="">
+                <fieldset class="form-group">
+                    <legend class="border-bottom mb-4"></legend>
+                    <div class="form-group">
+                        {{ form.item.label(class="form-control-label") }}<br>
+                        {{ form.item(size=30) }}
+                    </div>
+                </fieldset>
+                <div class="form-group">
+                    {{ form.submit(class="btn btn-outline-info") }}
+                </div>
+            </form>
+        </div>
         <p class="lead">
             <a href="https://www.reddit.com/r/OSU/" class="btn btn-lg btn-secondary fw-bold border-white bg-blue"
                 target="_blank">Learn more</a>
