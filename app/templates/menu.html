@@ -6,5 +6,9 @@ Menu
 
 {% block content %}
 
+{% for item in items %}
+    <h1>{{ item.label }}</h1>
+    <p>By {{ item.employee.username }} on {{ item.date_added }}</p>
+{% endfor %}
    
 {% endblock %}

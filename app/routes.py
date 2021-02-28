@@ -25,7 +25,8 @@ def about():
 
 @app.route('/menu')
 def menu():
-    return render_template("menu.html")
+    items = Item.query.all()
+    return render_template("menu.html", items=items)
 
 
 @app.route('/register', methods=['GET', 'POST'])
