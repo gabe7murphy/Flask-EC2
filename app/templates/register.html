@@ -5,11 +5,12 @@ Register
 {% endblock %}
 
 {% block content %}
+<div class="container-fluid">
     <div class="content-section">
         <form method="POST" action="">
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Join Today</legend>
+                <legend class="border-bottom mb-4">Register with your Company Username</legend>
                 <div class="form-group">
                     {{ form.username.label(class="form-control-label") }}
                     {{ form.username(class="form-control form-control-lg") }}
@@ -33,4 +34,5 @@ Register
             Already Have An Account? <a class="ml-2" href="{{ url_for('login') }}">Sign In</a>
         </small>
     </div>
+</div>
 {% endblock %}
