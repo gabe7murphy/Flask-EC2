@@ -5,5 +5,15 @@ Home
 {% endblock %}
 
 {% block content %}
-<h1>{{ current_user.username }}</h1>
+<div class="container-fluid">
+    <h1>{{ current_user.username }}</h1>
+    <hr>
+    <h3>Currently Signed Up For:</h3>
+    
+    {% for item in current_user.items %}
+        <h3>{{ item.label }}</h3>
+    {% endfor %}
+</div>
+
+
 {% endblock %}

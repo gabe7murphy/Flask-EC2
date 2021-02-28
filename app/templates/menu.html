@@ -5,10 +5,14 @@ Menu
 {% endblock %}
 
 {% block content %}
+<div class="container-fluid">
+    <h1>Menu</h1>
+    <hr>
+    {% for item in items %}
+        <h3>{{ item.label }}</h3>
+        <p>By {{ item.employee.username }} on {{ item.date_added }}</p>
+    {% endfor %}
+</div>
 
-{% for item in items %}
-    <h1>{{ item.label }}</h1>
-    <p>By {{ item.employee.username }} on {{ item.date_added }}</p>
-{% endfor %}
    
 {% endblock %}
