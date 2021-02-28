@@ -29,31 +29,40 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarsExample04">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('menu') }}" style="position: relative; left: 30px;">Menu
+            <div class="navbar-nav mr-auto">
+
+                <a class="nav-link" href="{{ url_for('menu') }}" style="position: relative; left: 30px;">Menu
+                </a>
+                <a class="nav-link" href="{{ url_for('about') }}" style="position: relative; left: 30px;">About Us
+                </a>
+            </div>
+            <div class="navbar-nav" style="margin-right: 50px;">  
+                {% if current_user.is_authenticated %}
+                <a class="nav-link" href="{{ url_for('account') }}" style="position: relative; left: 30px;">Account
+                <a class="nav-link" href="{{ url_for('logout') }}" style="position: relative; left: 30px;">Log Out
+                </a>
+                {% else %}
+                    <a class="nav-link" href="{{ url_for('login') }}" style="position: relative; left: 30px;">Log In
                     </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('about') }}" style="position: relative; left: 30px;">About Us
+                    <a class="nav-link" href="{{ url_for('register') }}" style="position: relative; left: 30px;">Register
                     </a>
-                </li>
-            </ul>
+                {% endif %}
+            </div>
         </div>
     </nav>
     <div>
         {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %}
-                {% for category, message in messages %}
-                    <div class="alert alert-{{ category }}">
-                        {{ message }}
-                    </div>
-                {% endfor %}
-            {% endif %}
+        {% if messages %}
+        {% for category, message in messages %}
+        <div class="alert alert-{{ category }}">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
         {% endwith %}
         {% block content %}{% endblock %}
     </div>
-    
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 
